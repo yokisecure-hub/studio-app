@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ブロックゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>ブロックゲーム</h1>
+            <div class="score-board">
+                <div class="score">
+                    <span>スコア</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="level">
+                    <span>レベル</span>
+                    <span id="level">1</span>
+                </div>
+                <div class="lines">
+                    <span>ライン</span>
+                    <span id="lines">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <canvas id="game-canvas"></canvas>
+            <div class="next-piece">
+                <h3>次のブロック</h3>
+                <canvas id="next-canvas"></canvas>
+            </div>
+        </div>
+
+        <div class="game-controls">
+            <button id="start-btn" class="btn btn-start">スタート</button>
+            <button id="pause-btn" class="btn btn-pause" disabled>ポーズ</button>
+            <button id="reset-btn" class="btn btn-reset">リセット</button>
+        </div>
+
+        <div class="touch-controls">
+            <div class="control-row">
+                <button class="control-btn" id="rotate-btn">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="control-row">
+                <button class="control-btn" id="left-btn">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                <button class="control-btn" id="down-btn">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <button class="control-btn" id="right-btn">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+            <div class="control-row">
+                <button class="control-btn control-btn-wide" id="drop-btn">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <polyline points="19 12 12 19 5 12"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <p><strong>操作方法:</strong></p>
+            <p>PC: ← → キーで移動、↑ キーで回転、↓ キーで高速落下、スペースで即座に落下</p>
+            <p>スマホ: 画面下のボタンで操作</p>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
