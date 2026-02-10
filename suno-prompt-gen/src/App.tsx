@@ -39,7 +39,7 @@ export default function App() {
             🎵 Suno v5.0+ 楽曲プロンプトジェネレーター
           </h1>
           <p className="text-center text-sm text-gray-500 mt-1">
-            Gemini 2.0 Flash 搭載 — 高品質な楽曲生成プロンプトを自動生成
+            API Key不要 — 高品質な楽曲生成プロンプトを自動生成
           </p>
         </div>
 
