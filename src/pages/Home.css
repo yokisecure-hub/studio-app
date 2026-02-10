@@ -1,0 +1,76 @@
+.home {
+  padding: 20px 16px calc(var(--safe-bottom) + 20px);
+}
+
+.home-hero {
+  text-align: center;
+  padding: 28px 0 24px;
+}
+
+.home-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 12px;
+  background: var(--color-surface);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.home-hero h1 {
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+}
+
+.home-hero p {
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.template-card {
+  background: var(--color-surface);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  padding: 20px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.15s, opacity 0.15s;
+  -webkit-user-select: none;
+  user-select: none;
+  text-align: center;
+}
+
+.template-card:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+.template-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.template-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.template-desc {
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  line-height: 1.3;
+}

@@ -1,0 +1,72 @@
+.calc-app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.calc-display {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 20px 24px;
+  min-height: 120px;
+}
+
+.calc-value {
+  font-size: 2.8rem;
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.calc-buttons {
+  padding: 0 12px calc(var(--safe-bottom) + 12px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.calc-row {
+  display: flex;
+  gap: 10px;
+}
+
+.calc-btn {
+  flex: 1;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: var(--color-surface);
+  color: var(--color-text);
+  transition: opacity 0.1s;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.calc-btn:active {
+  opacity: 0.7;
+}
+
+.calc-btn.op {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.calc-btn.fn {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-text);
+}
+
+.calc-btn.zero {
+  flex: 2.1;
+  border-radius: 40px;
+  aspect-ratio: auto;
+  padding: 0 24px;
+  text-align: left;
+}
